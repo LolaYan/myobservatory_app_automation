@@ -1,0 +1,19 @@
+framework: behave
+app_aos: "../assets/myobservatory-5-12-1.apk"  
+app_ios: "../assets/myobservatory-7.9.2.ipa"  
+platform:
+  - platformName: android
+    deviceName: Samsung Galaxy S22 Ultra
+    platformVersion: 12.0
+  - platformName: android
+    deviceName: Google Pixel 7 Pro
+    platformVersion: 13.0
+  - platformName: android
+    deviceName: OnePlus 9
+    platformVersion: 11.0
+  - platformName: "iOS"  
+    deviceName: "iPhone 15"  
+    platformVersion": "18.0"
+browserstackLocal: true
+buildName: MyObs-build-1
+projectName: MyObs Sample

@@ -1,0 +1,19 @@
+android:  
+  platformName: "Android"  
+  automationName: "uiautomator2"  
+  deviceName: "emulator-5554"  
+  platformVersion": "15"
+  app: "../assets/myobservatory-5-12-1.apk"  
+  appPackage": "hko.MyObservatory_v1_0"  
+  appActivity": "hko.homepage3.HomepageActivity"
+ios:
+  platformName: "iOS"  
+  automationName: "XCUITest"  
+  deviceName: "iPhone 11 Pro Max"  
+  platformVersion": "18.3.1"
+  app: "../assets/myobservatory-7.9.2.ipa"  
+  udid": "00008030-000458EE3CB9802E"
+  bundleId": "locspc"
+  xcodeOrgId": "BJJ4YML6F5"
+  updatedWDABundleId": "com.lola.WebDriverAgentRunner"
+  noReset": true
