@@ -1,8 +1,8 @@
 from hamcrest import assert_that
-from pages.base_page import BasePage
+from pages.AOS_nine_days_forecast_page import NineDaysForecastPage
 
 
-class NineDaysForecastPage(BasePage):
+class iOSNineDaysForecastPage(NineDaysForecastPage):
 
     # HEADER_HAM_BTN eles 
     NINE_DAYS_FORECAST_MENU_TAB = ('xpath', '//*[contains(@text, "9-Day Forecast")]')

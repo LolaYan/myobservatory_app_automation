@@ -18,6 +18,10 @@ from pages.AOS_home_page import HomePage
 from pages.AOS_home_header_ham_menu_page import HomeHeaderHamMenuPage
 from pages.AOS_nine_days_forecast_page import NineDaysForecastPage
 
+from pages.iOS_home_page import iOSHomePage
+from pages.iOS_home_header_ham_menu_page import iOSHomeHeaderHamMenuPage
+from pages.iOS_whats_new_page import iOSWhatsNewPage
+from pages.iOS_nine_days_forecast_page import iOSNineDaysForecastPage
 
 class Pages:
     def __init__(self, driver):
@@ -43,3 +47,7 @@ class Pages:
         self.aos_home_header_ham_menu = HomeHeaderHamMenuPage(self._driver)
         self.aos_nine_days_forecast = NineDaysForecastPage(self._driver)
 
+        self.ios_home = iOSHomePage(self._driver)
+        self.ios_home_header_ham_menu = iOSHomeHeaderHamMenuPage(self._driver)
+        self.ios_whats_new = iOSWhatsNewPage(self._driver)
+        self.ios_nine_days_forecast = iOSNineDaysForecastPage(self._driver)

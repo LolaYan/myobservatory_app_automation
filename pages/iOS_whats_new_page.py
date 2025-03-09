@@ -1,7 +1,7 @@
-from pages.base_page import BasePage
+from pages.AOS_whats_new_page import WhatsNewPage
 from hamcrest import assert_that
 
-class WhatsNewPage(BasePage):
+class iOSWhatsNewPage(WhatsNewPage):
 
     # There should be 2 sliding pages in this page
     # exit_btn in sub-page-1 means "next", means "close" in sub-page-2
