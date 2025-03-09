@@ -8,18 +8,17 @@ def pytest_addoption(parser):
 
 @pytest.fixture(scope="session")
 def env(request):
-    """全局环境配置"""
+    """get env from cmd running"""
     return request.config.getoption("--env")
 
 @pytest.fixture(scope="function")
 def platform(request):
-    """动态解析平台标记"""
-    # 优先从命令行参数获取（兼容性扩展）
+    # try to read platform from cmd, eg feature test running
     cli_platform = request.config.getoption("--platform", None)
     if cli_platform:
         return cli_platform
     
-    # 从 pytest.mark 解析
+    # parce pytest.mark to get platform
     platform_markers = [
         marker.name for marker in request.node.iter_markers() 
         if marker.name in ("android", "ios")
@@ -27,16 +26,16 @@ def platform(request):
     if platform_markers:
         return platform_markers[0]
     
-    pytest.skip("未指定测试平台 (android/ios)")
+    pytest.skip("No platform provide (android/ios)")
 
 @pytest.fixture(scope="function")
 def driver(env, platform):
-    """驱动初始化（每个测试函数独立实例）"""
+    """Initial driver on every function test"""
     driver = get_driver(env, platform)
     yield driver
     driver.quit()
 
 @pytest.fixture
 def pages(driver):
-    """按需初始化的页面对象"""
+    """Initial pages on demand"""
     return Pages(driver)
