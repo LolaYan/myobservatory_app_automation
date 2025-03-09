@@ -63,10 +63,10 @@ A cross-platform automation testing framework for Android and iOS apps using ​
    behave features/verify_nine-days_forecast_page.feature -D platform=aos
 
 - ​**Run test in browserstack**:
-   Save browserstack credentials in .env file under root folder
-   BROWSERSTACK_USERNAME=your_username
-   BROWSERSTACK_ACCESS_KEY=your_access_key
-   Then run command below:
+   - Save browserstack credentials in .env file under root folder
+      * BROWSERSTACK_USERNAME=your_username
+      * BROWSERSTACK_ACCESS_KEY=your_access_key
+   -Then run command below:
    ```bash
    # Android
    pytest tests/ -m aos --env=browserstack
