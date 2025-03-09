@@ -28,8 +28,8 @@ A cross-platform automation testing framework for Android and iOS apps using ​
 ## 📥 Installation
 1. ​**Clone the repository**:
    ```bash
-   git clone https://github.com/your-username/automation.git
-   cd automation
+   git clone https://github.com/LolaYan/myobservatory_app_automation
+   cd myobservatory_app_automation
 
 2. ​**​Install dependencies**:
    ```bash
