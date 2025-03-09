@@ -43,7 +43,7 @@ A cross-platform automation testing framework for Android and iOS apps using ​
    ```bash
    appium
 
-## 🧪 Installation
+## 🧪 Run Tests
 - ​**Run with pytest**:
    ```bash
    # Android
@@ -81,8 +81,6 @@ A cross-platform automation testing framework for Android and iOS apps using ​
    allure open ./allure-report
 
 ## 📂 Project Directory Structure
-# Project Directory Structure
-
 ```plaintext
 myobservatory_app_automation/
 ├── allure-results/       # Allure raw test data
