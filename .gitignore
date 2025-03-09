@@ -2,3 +2,6 @@ __pycache__/*
 */__pycache__/*
 .pytest_cache/*
 allure-results/*
+.env
+.DS_Store
+*/DS_Store/*
