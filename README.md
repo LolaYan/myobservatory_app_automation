@@ -66,7 +66,7 @@ A cross-platform automation testing framework for Android and iOS apps using ​
    - Save browserstack credentials in .env file under root folder
       * BROWSERSTACK_USERNAME=your_username
       * BROWSERSTACK_ACCESS_KEY=your_access_key
-   -Then run command below:
+   - Then run command below:
    ```bash
    # Android
    pytest tests/ -m aos --env=browserstack
