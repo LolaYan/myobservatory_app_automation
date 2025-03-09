@@ -60,7 +60,7 @@ A cross-platform automation testing framework for Android and iOS apps using ​
 
 - ​**Run BDD Tests with behave**:
    ```bash
-   behave features/verify_nine-days_forecast_page.feature -D platform=aos
+   behave features/verify_nine-days_forecast_page.feature -D env=dev
 
 - ​**Run test in browserstack**:
    - Save browserstack credentials in .env file under root folder
