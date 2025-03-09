@@ -81,35 +81,38 @@ A cross-platform automation testing framework for Android and iOS apps using ​
    allure open ./allure-report
 
 ## 📂 Project Directory Structure
+# Project Directory Structure
 
-- myobservatory_app_automation/
-   - allure-results/       # Allure raw test data
-   - assets/               # Static resources (images/fonts)
-   - config/               # Environment configurations
-      * dev.yaml          # Development config
-      * staging.yaml      # Staging config
-      * prod.yaml         # Production config
-   - features/             # BDD feature files
-      * steps/            # Step definitions
-         * test_nine_days_forecast_steps.py
-      * environment.py    # Behave hooks
-      * verify_nine-days_forecast_page.feature
-   - pages/                # Page Object classes
-   - screenshots/          # Test failure screenshots
-   - scripts/              # Utility scripts
-      * get_android_device_info.sh    # Fetch Android device info
-      * test_appium_setup.py          # Validate Appium setup
-   - task2/                # Task-specific modules
-      * get_forecast_weather.py
-   - tests/                # pytest test cases
-      * test.py
-   - utils/                # Helper classes
-      * driver_manager.py  # Appium driver initialization
-   - .gitignore            # Git ignore rules
-   - conftest.py           # pytest fixtures
-   - pytest.ini            # pytest configurations
-   - README.md             # Project documentation
-   - requirements.txt      # Python dependencies
+```plaintext
+myobservatory_app_automation/
+├── allure-results/       # Allure raw test data
+├── assets/               # Static resources (images/fonts)
+├── config/               # Environment configurations
+│   ├── dev.yaml          # Development config
+│   ├── staging.yaml      # Staging config
+│   └── prod.yaml         # Production config
+├── features/             # BDD feature files
+│   ├── steps/            # Step definitions
+│   │   └── test_nine_days_forecast_steps.py
+│   ├── environment.py    # Behave hooks
+│   └── verify_nine-days_forecast_page.feature
+├── pages/                # Page Object classes
+├── screenshots/          # Test failure screenshots
+├── scripts/              # Utility scripts
+│   ├── get_android_device_info.sh    # Fetch Android device info
+│   └── test_appium_setup.py          # Validate Appium setup
+├── task2/                # Task-specific modules
+│   └── get_forecast_weather.py
+├── tests/                # pytest test cases
+│   └── test.py
+├── utils/                # Helper classes
+│   └── driver_manager.py  # Appium driver initialization
+├── .gitignore            # Git ignore rules
+├── conftest.py           # pytest fixtures
+├── pytest.ini            # pytest configurations
+├── README.md             # Project documentation
+└── requirements.txt      # Python dependencies
+```
 
 ## 🔧 Troubleshooting
 - ​**Device Not Detected**:
