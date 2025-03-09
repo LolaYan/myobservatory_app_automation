@@ -135,7 +135,7 @@ myobservatory_app_automation/
    pytest tests/test.py -s -v --alluredir=./allure-result
 
    # Behave run
-   behave features/verify_nine-days_forecast_page.feature -D platform=aos
+   behave features/verify_nine-days_forecast_page.feature -D env=dev
 
 - ​**Task-2:**:
    ```bash
