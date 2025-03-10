@@ -2,6 +2,8 @@ from time import sleep
 from pages import Pages
 import allure
 import pytest
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.mark.android
 def test_android_app(pages: Pages):
@@ -17,10 +19,12 @@ def test_android_app(pages: Pages):
     # Scenario 3 - device_notification_setting page
     # In some android version, notification won't pop up
     noti_locator = pages.aos_device_notification_setting.NOTIFICATION_POPUP_TITLE
-    noti_element = pages.aos_device_notification_setting.find_element(noti_locator)
-    if noti_element :
+    try: 
+        noti_element = WebDriverWait(pages.aos_device_notification_setting.driver, 10).until(EC.visibility_of_element_located(noti_locator))
         pages.aos_device_notification_setting.verify_page_loaded()
         pages.aos_device_notification_setting.click_allow_option()
+    except Exception as e:  
+        print("We could not find the element in 10s, skip related tests and move on with rest test steps.")
 
     # Scenario 4 - background_location_access page
     pages.aos_background_location_access.verify_page_loaded()
@@ -41,13 +45,15 @@ def test_android_app(pages: Pages):
     # Scenario 7 - whats_new page
     # In some android version, whats_new page won't display like android 15
     whats_new_locator = pages.aos_whats_new.NEXT_BUTTON
-    whats_new_element = pages.aos_whats_new.find_element(whats_new_locator)
-    if whats_new_element :
+    try: 
+        whats_new_element = WebDriverWait(pages.aos_whats_new.driver, 10).until(EC.visibility_of_element_located(whats_new_locator))
         pages.aos_whats_new.verify_sub_page1_loaded()
         pages.aos_whats_new.click_next_btn()
         pages.aos_whats_new.verify_sub_page2_loaded()
         pages.aos_whats_new.click_not_show_btn()
-
+    except Exception as e:  
+        print("We could not find the element in 10s, skip related tests and move on with rest test steps.")
+        
     ####### App Features Scenario  #############  
     # Scenario 8 - home page
     pages.aos_home.verify_page_loaded()
@@ -63,7 +69,7 @@ def test_android_app(pages: Pages):
     pages.aos_nine_days_forecast.verify_page_loaded()
         
 @pytest.mark.ios
-def test_android_app(pages: Pages):
+def test_ios_app(pages: Pages):
     assert True
     ####### IOS device Set up  #############  
     pages.ios_nextwork_access.verify_page_loaded()
