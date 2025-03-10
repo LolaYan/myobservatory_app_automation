@@ -78,7 +78,7 @@ A cross-platform automation testing framework for Android and iOS apps using ​
    - Then run command below:
    ```bash
    # Android
-   pytest tests/ -m aos --env=browserstack
+   pytest tests/ -m android --env=browserstack
   
 - ​**Generate Allure Report**:
    ```bash
