@@ -46,10 +46,19 @@ A cross-platform automation testing framework for Android and iOS apps using ​
 ## 🧪 Run Tests
 - ​**Run with pytest**:
    ```bash
-   # Android
-   pytest tests/ -m aos --env=dev
+   # pytest run android tests only
+   pytest tests/ -m android -s -v --alluredir=./allure-result --env=dev
+
+   # pytest run ios tests only
+   pytest tests/ -m ios -s -v --alluredir=./allure-result --env=dev
+
+   # pytest run all tests only
+   pytest tests/ -s -v --alluredir=./allure-result --env=dev
+
+   # pytest run android tests without log
+   pytest tests/ -m android --env=dev
    
-   # iOS
+   # pytest run ios tests without log
    pytest tests/ -m ios --env=dev
 
    # run test with debug log
@@ -129,7 +138,13 @@ myobservatory_app_automation/
 ## 📂 Run Tasks
 - ​**Task-1:**:
    ```bash
-   # pytest run
+   # pytest run android tests only
+   pytest tests/test.py -m android -s -v --alluredir=./allure-result
+
+   # pytest run ios tests only
+   pytest tests/test.py -m ios -s -v --alluredir=./allure-result
+
+   # pytest run all tests only
    pytest tests/test.py -s -v --alluredir=./allure-result
 
    # Behave run
