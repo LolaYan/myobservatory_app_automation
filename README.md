@@ -37,6 +37,9 @@ A cross-platform automation testing framework for Android and iOS apps using ​
 
 3. ​**Configure environments**:
 - Update config/dev.yaml, config/staging.yaml, and config/prod.yaml with your app/device details.
+- Use absolute Path of apk or ipa in your laptop in capability setting, like 
+   ```bash
+   app: "/Users/hongxianyan/workspace/myobservatory_app_automation/assets/myobservatory-5-12-1.apk"  
 
 4. ​**Start Appium Server**:
 - When we test locally, we need start the appium server. If we need to trigger the test in Cloud Platform like browserstack, no need to do this
