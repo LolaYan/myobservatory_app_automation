@@ -3,7 +3,7 @@ android:
   automationName: "uiautomator2"  
   deviceName: "emulator-5554"  
   platformVersion": "15"
-  app: "../assets/myobservatory-5-12-1.apk"  
+  app: "/Users/hongxianyan/workspace/myobservatory_app_automation/assets/myobservatory-5-12-1.apk"  
   appPackage": "hko.MyObservatory_v1_0"  
   appActivity": "hko.homepage3.HomepageActivity"
 ios:
